@@ -1,8 +1,8 @@
 .navbar {
     width: 100%;
     max-width: 100%;
-    background-color: rgb(190, 0, 0);
-    color: white;
+    background-color: transparent;
+    color: #faf9f1;
     padding: 30px 20px;
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@
   }
   
   .navbar.scrolled {
-    background-color: #9c1b1b; /* Red shade of Prognosis */
+    background-color: rgb(128, 0, 0); /* Red shade of Prognosis */
   }
   
   .home-logo {
@@ -42,7 +42,7 @@
   
   .nav-links a,
   .nav-actions a {
-    color: white;
+    color: #faf9f1;
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
@@ -51,7 +51,6 @@
   
   .nav-links a:hover,
   .nav-actions a:hover {
-      text-decoration: underline;
       color: #ddd8ce;
   }
   

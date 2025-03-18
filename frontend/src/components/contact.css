@@ -1,13 +1,13 @@
 .contact {
     padding: 80px 20px;
     text-align: center;
-    background: #f8f9fa;
+    background: #faf9f1;
   }
   
   .contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #9c1b1b;
+    color: rgb(128, 0, 0);
   }
   
   .contact form {
@@ -22,21 +22,21 @@
     margin-bottom: 10px;
     padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #faf9f1;
     border-radius: 5px;
   }
   
   .contact button {
     padding: 12px 20px;
     font-size: 18px;
-    background: #9c1b1b; /* Match the red color */
-    color: white;
+    background: rgb(128, 0, 0);
+    color: #faf9f1;
     border: none;
     cursor: pointer;
     transition: background 0.3s;
   }
   
   .contact button:hover {
-    background: #d9534f; /* Slightly lighter red */
+    background: #d9534f; 
   }
   

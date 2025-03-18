@@ -1,7 +1,7 @@
 .resources {
     padding: 80px 20px;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: #faf9f1;
 }
 
 .resources h2 {
@@ -20,7 +20,7 @@
 }
 
 .resources a {
-    color: #007bff;
+    color: rgb(128, 0, 0);
     text-decoration: none;
 }
 

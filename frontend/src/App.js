@@ -4,15 +4,18 @@ import Footer from './components/footer.jsx';
 import Home from "./pages/home.jsx";
 import Solutions from "./pages/solutions.jsx";
 import Resources from "./pages/resources.jsx";
-import About from "./components/about.jsx";
+import About from "./pages/about.jsx";
 import Pricing from "./pages/pricing.jsx";
 import Contact from "./pages/contact.jsx";
 import Login from "./pages/login.jsx";
+import Signup from "./pages/signup.jsx";
+import Dashboard from "./components/dashboard/dashboard.jsx";
 import "./App.css";
+
 
 const AppContent = () => {
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === "/contact" || location.pathname === "/login";
+  const hideNavAndFooter = location.pathname === "/contact" || location.pathname === "/login" || location.pathname === "/signup";
   return (
     <>
       {!hideNavAndFooter && <Navbar />}
@@ -24,6 +27,8 @@ const AppContent = () => {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
       {!hideNavAndFooter && <Footer />}
     </>

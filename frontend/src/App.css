@@ -1,15 +1,15 @@
-/* This can be applied to the homepage, or in the global styles */
+
 .homepage {
-  background-color: #f8f8f8; /* Soft grey or cream background */
+  background-color: #faf9f1;
   min-height: 100vh;
-  padding-top: 100px; /* To make sure content doesn't get hidden under the fixed navbar */
+  padding-top: 100px; 
 }
 
 .hero {
-  background-color: #9c1b1b; /* Red color */
-  color: white;
+  background-color: #faf9f1;
+  color: #faf9f1;
   text-align: center;
-  padding: 100px 20px;
+  padding: 100px 0px;
 }
 
 .hero h1 {
@@ -24,14 +24,14 @@
 }
 
 .hero .cta-btn {
-  background-color: #00bcd4;
+  background-color: rgb(192, 128, 128);
   padding: 15px 30px;
   border-radius: 5px;
-  color: white;
+  color: #faf9f1;
   font-size: 18px;
   text-decoration: none;
 }
 
 .hero .cta-btn:hover {
-  background-color: #ff4081;
+  background-color: rgb(154, 4, 4);
 }

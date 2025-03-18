@@ -1,15 +1,15 @@
 .about {
     padding: 80px 20px;
     text-align: center;
-    background: #f8f9fa;
-    color: #333; /* Slightly darker text for contrast */
+    background: #faf9f1;
+    color: #333; 
   }
   
   .about h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #9c1b1b; /* Match the red color from the navbar */
+    color: rgb(128, 0, 0); 
   }
   
   .about p {

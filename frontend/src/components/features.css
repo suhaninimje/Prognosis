@@ -1,39 +1,61 @@
 .features {
-    padding: 80px 20px;
-    text-align: center;
-    background: #f8f9fa;
-  }
-  
-  .features h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #9c1b1b; /* Matching the brand's red color */
-    font-weight: bold;
-  }
-  
-  .features-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .feature {
-    max-width: 300px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .feature h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #9c1b1b;
-  }
-  
-  .feature p {
-    font-size: 16px;
-    color: #555;
-  }
-  
+  padding-top: 5px;
+  padding-bottom: 80px;
+  text-align: center;
+  background: rgb(128, 0, 0);
+}
+
+.features h2 {
+  font-size: 50px;
+  text-align: center;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  color: #faf9f1;
+  font-weight: bold;
+}
+
+.features-intro {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #faf9f1;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.feature {
+  padding: 20px;
+  background: #faf9f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(128, 0, 0);
+  font-weight: bold;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}

@@ -1,0 +1,26 @@
+.dash-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .navbar-logo h3 {
+    font-size: 24px;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .navbar-links ul li {
+    cursor: pointer;
+  }
+  
+  .navbar-links ul li:hover {
+    text-decoration: underline;
+  }
+  

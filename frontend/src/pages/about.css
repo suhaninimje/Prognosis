@@ -1,0 +1,96 @@
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #faf9f1;
+    color: #333;
+  }
+  
+  .about h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(128, 0, 0); /* Match the red color from the navbar */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .about h2:hover {
+    color: #b71c1c; /* Darker shade on hover */
+  }
+  
+  .about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .about p:hover {
+    color: #333;
+  }
+  
+  .mission, .why, .values, .team {
+    margin-top: 40px;
+    padding: 20px;
+    background: #faf9f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .mission:hover, .why:hover, .values:hover, .team:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mission h3, .why h3, .values h3, .team h3 {
+    font-size: 28px;
+    color: rgb(128, 0, 0);
+    margin-bottom: 10px;
+  }
+  
+  .mission p, .why p, .values p, .team p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .values ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .values li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .values li:hover {
+    color: #9c1b1b;
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      padding: 40px 10px;
+    }
+  
+    .about h2 {
+      font-size: 28px;
+    }
+  
+    .about p {
+      font-size: 16px;
+    }
+  
+    .mission h3, .why h3, .values h3, .team h3 {
+      font-size: 24px;
+    }
+  
+    .mission p, .why p, .values p, .team p {
+      font-size: 16px;
+    }
+  }
+  
