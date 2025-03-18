@@ -1,0 +1,73 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  .right-side {
+    flex: 1;
+    background-color: #c82333;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .login-form input {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .login-form button {
+    background-color: #c82333;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #a61c29;
+  }
+
+  .prognosis-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+  }
+  
+  .back-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #555;
+  }
+  

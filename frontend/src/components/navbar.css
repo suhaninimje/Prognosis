@@ -1,0 +1,58 @@
+.navbar {
+    width: 100%;
+    max-width: 100%;
+    background-color: rgb(190, 0, 0);
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+  }
+  
+  .navbar.scrolled {
+    background-color: #9c1b1b; /* Red shade of Prognosis */
+  }
+  
+  .home-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 180px;
+  }
+  
+  .nav-links,
+  .nav-actions {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+  
+  .nav-links li,
+  .nav-actions li {
+    display: inline-block;
+  }
+  
+  .nav-links a,
+  .nav-actions a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover,
+  .nav-actions a:hover {
+      text-decoration: underline;
+      color: #ddd8ce;
+  }
+  
+  

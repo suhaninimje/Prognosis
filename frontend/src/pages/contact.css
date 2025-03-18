@@ -1,0 +1,57 @@
+.contact-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-side {
+    flex: 1;
+    background-color: #c82333;
+  }
+  
+  .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  .right-side h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+  }
+  
+  .prognosis-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+  }
+
+  .back-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #555;
+  }

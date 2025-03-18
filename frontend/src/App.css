@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* This can be applied to the homepage, or in the global styles */
+.homepage {
+  background-color: #f8f8f8; /* Soft grey or cream background */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 100px; /* To make sure content doesn't get hidden under the fixed navbar */
+}
+
+.hero {
+  background-color: #9c1b1b; /* Red color */
   color: white;
+  text-align: center;
+  padding: 100px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero .cta-btn {
+  background-color: #00bcd4;
+  padding: 15px 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.hero .cta-btn:hover {
+  background-color: #ff4081;
 }
