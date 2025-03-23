@@ -3,14 +3,14 @@ import Navbar from "./components/navbar.jsx";
 import Footer from './components/footer.jsx';
 import Home from "./pages/home.jsx";
 import Solutions from "./pages/solutions.jsx";
-import Resources from "./pages/resources.jsx";
 import About from "./pages/about.jsx";
 import Pricing from "./pages/pricing.jsx";
-import Contact from "./pages/contact.jsx";
+import Contact from "./components/contact.jsx";
 import Login from "./pages/login.jsx";
 import Signup from "./pages/signup.jsx";
 import Dashboard from "./components/dashboard/dashboard.jsx";
 import "./App.css";
+import CaseStudies from "./pages/caseStudies.jsx";
 
 
 const AppContent = () => {
@@ -22,7 +22,7 @@ const AppContent = () => {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/solutions" element={<Solutions />} />
-          <Route path="/resources" element={<Resources />} />
+          <Route path="/casestudies" element={<CaseStudies />} />
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />

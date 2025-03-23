@@ -7,8 +7,11 @@ import logo from "../logo2.png";
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer-text">
+        <h1>From Data to Insights, we've got you covered.</h1>
+        <h2>Contact us today to experience AI-driven health solutions tailored to your region's needs!</h2>
+      </div>
       <div className="footer-container">
-        {/* Left: Prognosis Logo and Newsletter */}
         <div className="footer-left">
           <div className="footer-logo">
             <img src={logo} alt="Prognosis Logo" className="footer-logo-img" /> 
@@ -23,7 +26,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right: Quick Links and Socials */}
         <div className="footer-right">
           <div className="footer-links-section">
             <h3>Quick Links</h3>
@@ -41,12 +43,11 @@ const Footer = () => {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Section */}
-      <div className="footer-bottom">
-        <p>&copy; 2025 Prognosis. All rights reserved.</p>
-        <p><Link to="/privacy-policy">Privacy Policy</Link> | <Link to="/terms-of-service">Terms of Service</Link></p>
+        <div className="footer-bottom">
+          <p>&copy; 2025 Prognosis. All rights reserved.</p>
+          <p><Link to="/privacy-policy">Privacy Policy</Link> | <Link to="/terms-of-service">Terms of Service</Link></p>
+        </div>
       </div>
     </footer>
   );

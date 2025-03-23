@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "./login.css";
 import { useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash, FaArrowLeft } from "react-icons/fa";
 import logo from "../logo2.png";
+import "./login.css";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
-
-        // Mock login validation (use an API for real-world app)
         if (email === "user@example.com" && password === "password123") {
             localStorage.setItem("user", JSON.stringify({ email, role: "admin" }));
             navigate("/dashboard");
@@ -23,7 +23,6 @@ const Login = () => {
     return (
         <div className="login-container">
             <div className="left-side">
-                {/* Prognosis Logo */}
                 <img src={logo} alt="Prognosis Logo" className="prognosis-logo" />
                 <h2>Login to Prognosis</h2>
                 <form className="login-form" onSubmit={handleLogin}>
@@ -34,20 +33,30 @@ const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
+                    <div className="password-container">
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <span onClick={() => setShowPassword(!showPassword)}>
+                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                        </span>
+                    </div>
                     <button type="submit">Login</button>
                 </form>
+
+                
+                <p className="signup-text">
+                    Don't have an account? <span onClick={() => navigate("/signup")}>Sign Up</span>
+                </p>
+
+                <button className="back-button" onClick={() => navigate("/")}>
+                    <FaArrowLeft />
+                </button>
             </div>
-            <div className="right-side"></div>
-            <button className="back-button" onClick={() => navigate("/")}>
-                Back to Home
-            </button>
         </div>
     );
 };

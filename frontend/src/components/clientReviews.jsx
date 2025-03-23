@@ -4,35 +4,37 @@ import "./clientReviews.css";
 const ClientReviews = () => {
   return (
     <section className="client-reviews">
-      <h2>Client Reviews</h2>
+      <h2>What Our Clients Say</h2>
 
       <div className="reviews-container">
-        <div className="review">
-          <p>
-            "Prognosis has been indispensable in our efforts to prevent dengue outbreaks. Their accurate predictions and timely warnings have significantly improved our disease control strategies."
-          </p>
-          <h4>Michael Smith</h4>
-          <p className="position">Health Officer</p>
-        </div>
-
-        <div className="review">
-          <p>
-            "Partnering with Prognosis has transformed our approach to dengue prevention. Their localized data reports have empowered us to implement targeted interventions, minimizing the impact of dengue outbreaks."
-          </p>
-          <h4>Laura Johnson</h4>
-          <p className="position">NGO Director</p>
-        </div>
-
-        <div className="review">
-          <p>
-            "Prognosis plays a vital role in our fight against dengue. Their early warning system enables proactive planning and response, ultimately saving lives and valuable resources."
-          </p>
-          <h4>David Brown</h4>
-          <p className="position">Government Official</p>
-        </div>
+        {reviews.map((review, index) => (
+          <div className="review" key={index}>
+            <p>"{review.text}"</p>
+            <h4>{review.author}</h4>
+            <p className="position">{review.position}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
+
+const reviews = [
+  {
+    text: "Prognosis has been indispensable in preventing dengue outbreaks. Their accurate predictions and timely warnings have improved disease control strategies.",
+    author: "Michael Smith",
+    position: "Health Officer",
+  },
+  {
+    text: "Prognosis has transformed our approach to dengue prevention. Their localized data reports empower us to implement targeted interventions.",
+    author: "Laura Johnson",
+    position: "NGO Director",
+  },
+  {
+    text: "Prognosis plays a vital role in our fight against dengue. Their early warning system enables proactive planning and response, saving lives.",
+    author: "David Brown",
+    position: "Government Official",
+  },
+];
 
 export default ClientReviews;

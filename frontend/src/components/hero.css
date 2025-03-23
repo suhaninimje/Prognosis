@@ -2,20 +2,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 80vh;
+    height: 60vh;
     position: relative;
     overflow: hidden;
-    background-image: url('../heroImageMock.webp'); /* Set the background image here */
+    background-image: url('../heroImageMock.webp'); 
     background-size: cover;
     background-position: center;
 }
 
 /* Left Side - Quarter Circle */
 .hero-left {
-    position: absolute; /* Absolute positioning to make sure it stays on the left */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 50%; /* Set width to control how much space the circle will take */
+    width: 40%; /* Set width to control how much space the circle will take */
     height: 100%;
     padding: 60px;
     z-index: 2;
@@ -40,12 +40,12 @@
     text-align: left;
     max-width: 550px;
     color: #faf9f1;
-    margin-top: 300px;
-    padding-left: 80px;
+    margin-top: 200px;
+    padding-left: 60px;
 }
 
 .hero-content h1 {
-    font-size: 6em;
+    font-size: 8em;
     margin-bottom: 0px;
 }
 
@@ -55,17 +55,17 @@
     opacity: 0.9;
 }
 
-.cta-button {
+.tool-button {
     font-size: 1.2em;
     padding: 12px 30px;
     background-color: #faf9f1;
     color: rgb(128, 0, 0);
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.cta-button:hover {
+.tool-button:hover {
     background-color: #fff0f0;
 }

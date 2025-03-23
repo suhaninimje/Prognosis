@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Hero from "../components/hero";
 import Features from "../components/features";
 import Stats from "../components/stats";
-import About from "../components/about";
-import Contact from "../components/contact";
 import ClientReviews from "../components/clientReviews";
+import Contact from "../components/contact";
 
 const Home = () => {
   return (
@@ -13,7 +11,6 @@ const Home = () => {
       <Hero />
       <Stats />
       <Features />
-      <About />
       <ClientReviews />
       <Contact />
     </>

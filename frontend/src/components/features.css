@@ -1,23 +1,20 @@
 .features {
-  padding-top: 5px;
-  padding-bottom: 80px;
+  padding: 60px 20px;
   text-align: center;
-  background: rgb(128, 0, 0);
+  background: #faf9f1;
 }
 
 .features h2 {
   font-size: 50px;
-  text-align: center;
-  padding-left: 30px;
-  margin-bottom: 0px;
-  color: #faf9f1;
+  color: #ddd;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .features-intro {
   font-size: 18px;
   margin-bottom: 40px;
-  color: #faf9f1;
+  color: #555;
 }
 
 .features-grid {
@@ -31,15 +28,15 @@
 .feature {
   padding: 20px;
   background: #faf9f1;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .feature:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
@@ -48,8 +45,7 @@
 }
 
 .feature h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
   color: rgb(128, 0, 0);
   font-weight: bold;
 }

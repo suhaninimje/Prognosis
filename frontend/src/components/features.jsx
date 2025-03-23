@@ -24,32 +24,32 @@ const Features = () => {
 const featureData = [
   {
     title: "AI-Based Predictions",
-    description: "Analyze 21+ spatial-temporal factors to forecast dengue outbreaks up to 5 weeks in advance, helping healthcare providers stay proactive.",
+    description: "Our advanced AI model analyzes over 21 spatial-temporal factors—including climate conditions, population density, and land use—to predict dengue outbreaks up to five weeks in advance. By leveraging machine learning, we provide highly accurate forecasts that enable proactive disease management.",
     icon: "🤖",
   },
   {
     title: "Satellite Imagery Integration",
-    description: "Leverages real-time satellite imagery, temperature, humidity, and rainfall data to assess dengue-prone regions with precision.",
+    description: "We integrate real-time satellite imagery with environmental data such as temperature, humidity, and rainfall to monitor conditions that contribute to dengue spread. This allows us to detect high-risk areas and improve prediction accuracy using geospatial analysis.",
     icon: "🛰️",
   },
   {
     title: "B2B Healthcare Solutions",
-    description: "Designed for hospitals, clinics, and public health organizations to optimize resource allocation and enhance patient management.",
+    description: "Our platform is designed for hospitals, clinics, and healthcare organizations, helping them optimize resource allocation, predict patient influx, and enhance disease management strategies. By anticipating outbreaks, healthcare providers can better prepare for medical supply needs, staffing, and patient care.",
     icon: "🏥",
   },
   {
     title: "Actionable Insights & Reports",
-    description: "Provides interactive dashboards and customized reports for better decision-making and targeted disease control measures.",
+    description: "We offer interactive dashboards and customizable reports tailored to specific regions, allowing healthcare professionals and policymakers to make data-driven decisions. These reports highlight risk levels, trends, and recommendations for targeted disease control efforts.",
     icon: "📊",
   },
   {
     title: "User-Friendly Web Interface",
-    description: "A seamless, intuitive interface that allows healthcare professionals to access insights effortlessly without technical expertise.",
+    description: "Our intuitive web platform is designed for ease of use, enabling healthcare professionals to access insights without requiring technical expertise. The clean, simple interface ensures seamless navigation, making it easy to generate reports and visualize data.",
     icon: "💻",
   },
   {
     title: "Scalable & Global Expansion",
-    description: "Built for scalability—starting with dengue predictions in India, expanding to other diseases and regions for a broader health impact.",
+    description: "Starting with dengue predictions in India, our technology is adaptable for expansion to other vector-borne diseases like malaria and Zika. As we scale globally, we aim to provide predictive disease surveillance for different regions, improving public health worldwide.",
     icon: "🌍",
   },
 ];

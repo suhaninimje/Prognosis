@@ -1,42 +1,94 @@
 .contact {
-    padding: 80px 20px;
-    text-align: center;
-    background: #faf9f1;
-  }
-  
-  .contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: rgb(128, 0, 0);
-  }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .contact input,
-  .contact textarea {
-    margin-bottom: 10px;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #faf9f1;
-    border-radius: 5px;
-  }
-  
-  .contact button {
-    padding: 12px 20px;
-    font-size: 18px;
-    background: rgb(128, 0, 0);
-    color: #faf9f1;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .contact button:hover {
-    background: #d9534f; 
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 20px;
+  background: #faf9f1;
+}
+
+.contact-left, .contact-right {
+  flex: 1; /* Take equal space on both sides */
+  padding: 0 20px;
+}
+
+.contact-left {
+  text-align: left;
+}
+
+.contact-right {
+  text-align: left;
+}
+
+.contact-left h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: rgb(128, 0, 0);
+}
+
+.contact-left p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-detail {
+  margin-bottom: 15px;
+}
+
+.contact-detail h3 {
+  font-size: 18px;
+  color: rgb(128, 0, 0);
+  margin-bottom: 5px;
+}
+
+.contact-detail p {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(128, 0, 0);
+  border-radius: 5px;
+}
+
+.contact-right button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background: rgb(128, 0, 0);
+  color: #faf9f1;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-right button:hover {
+  background: #d9534f;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: rgb(128, 0, 0);
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #d9534f;
+}

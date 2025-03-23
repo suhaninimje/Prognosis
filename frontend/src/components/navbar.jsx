@@ -10,7 +10,7 @@ class Navbar extends Component {
   }
 
   handleScroll = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 100) {
       this.setState({ scrolled: true });
     } else {
       this.setState({ scrolled: false });
@@ -36,7 +36,7 @@ class Navbar extends Component {
         </div>
         <ul className="nav-links">
           <li><Link to="/solutions">Solutions</Link></li>
-          <li><Link to="/resources">Resources</Link></li>
+          <li><Link to="/casestudies">Case Studies</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/pricing">Pricing</Link></li>
         </ul>

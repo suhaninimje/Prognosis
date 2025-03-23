@@ -1,48 +1,47 @@
 .stats-section {
     text-align: center;
-    padding: 20px 20px;
+    padding: 0px 0px;
     background-color: #faf9f1;
 }
 
 .stats-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     color: rgb(128, 0, 0); /* Dark red */
 }
 
 .stats-section p {
     font-size: 1.2rem;
-    margin-bottom: 1px;
-    color: #444;
+    color: #654646;
 }
 
 .stats-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    background-color: rgb(242, 223, 223);
+    padding-bottom: 50px;
 }
 
 .stat-item {
     text-align: center;
-    min-width: 250px;
+    min-width: 300px;
 }
 
 .stat-item h3 {
     font-size: 4rem;
     font-weight: bold;
-    color: #333;
+    color: #351111;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .stat-item p {
     font-size: 1rem;
-    color: #666;
+    color: #351111;
 }
 
-/* Glow effect on hover */
 .glow-on-hover:hover {
-    color: rgb(171, 86, 86); /* Dark red */
+    color: rgb(128, 0, 0); 
     font-size: 4.1rem;
     text-shadow: 0 0 15px rgb(171, 86, 86);
     transition: text-shadow 0.3s ease-in-out;
