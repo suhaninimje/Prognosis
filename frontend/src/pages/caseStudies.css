@@ -4,7 +4,7 @@
 }
 
 .case-header {
-  background: linear-gradient(to bottom, rgb(128, 0, 0), rgb(128, 0, 0));
+  background: rgb(128, 0, 0);
   padding: 30px 20px;
   padding-bottom: 80px;
   opacity: 0;

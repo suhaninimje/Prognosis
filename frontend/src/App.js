@@ -11,6 +11,7 @@ import Signup from "./pages/signup.jsx";
 import Dashboard from "./components/dashboard/dashboard.jsx";
 import "./App.css";
 import CaseStudies from "./pages/caseStudies.jsx";
+import PredictionTool from "./pages/predictionTool.jsx";
 
 
 const AppContent = () => {
@@ -21,6 +22,7 @@ const AppContent = () => {
       {!hideNavAndFooter && <Navbar />}
       <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/tool" element={<PredictionTool />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/casestudies" element={<CaseStudies />} />
           <Route path="/about" element={<About />} />

@@ -1,5 +1,5 @@
 .footer {
-  background-image: url('../footerBG.png'); 
+  background-color: rgb(242, 223, 223); 
   position: absolute;
   display: flex;
   justify-content: center;

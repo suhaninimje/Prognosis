@@ -1,0 +1,110 @@
+.prediction-container {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tool-header {
+    background: rgb(128, 0, 0);
+    padding: 50px 20px;
+    padding-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    color: white;
+}
+
+.tool-header.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.toggle-buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid rgb(128, 0, 0);
+    background: white;
+    color: rgb(128, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.toggle-buttons button.active {
+    background: rgb(128, 0, 0);
+    color: white;
+}
+
+.toggle-buttons button:hover {
+    background: rgb(150, 0, 0);
+    color: white;
+}
+
+/* Input Fields */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.location-inputs,
+.latlong-inputs,
+.pincode-input {
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(128, 0, 0);
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Centering the Map */
+.map-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Button */
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(150, 0, 0);
+}
