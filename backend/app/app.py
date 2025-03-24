@@ -117,6 +117,7 @@ def predict():
     try:
         start_epiweek = request.json.get("start_epiweek")
         weeks_ahead = request.json.get("weeks_ahead", 5)
+        location = request.json.get("district_code", 530)
 
         project_folder = "/home/asareen/shared/Prognosis/results/"
         model_path = "/home/asareen/shared/Prognosis/saved_models/lstm_model.pth"
@@ -128,6 +129,8 @@ def predict():
             "--load_model_path", model_path,
             "--weeks_ahead", str(weeks_ahead)
         ]
+        if location:
+             cmd += ["--district_code", str(location)]
 
         if start_epiweek:
             cmd += ["--start_epiweek", str(start_epiweek)]
