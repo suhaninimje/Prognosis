@@ -22,7 +22,7 @@ The goal is to help hospitals and health organizations allocate resources effect
 
 ---
 
-### **2. Data Sources**
+### **Data Sources**
 Prognosis uses the following data sources for analysis:
 - **Satellite Imagery** (NASA, Google Earth Engine)
 - **Weather Data** (Temperature, Humidity, Rainfall)
@@ -33,7 +33,7 @@ The data is processed through advanced machine learning algorithms to generate a
 
 ---
 
-### **3. Model and Prediction Process**
+### **Model and Prediction Process**
 1. **Data Collection & Preprocessing**
    - Extract geospatial and temporal features.
    - Normalize and clean datasets.
@@ -46,7 +46,7 @@ The data is processed through advanced machine learning algorithms to generate a
 
 ---
 
-### **4. User Interface & Functionality**
+### **User Interface & Functionality**
 - **Web Application**
   - Users enter a region to generate a dengue outbreak forecast.
   - Reports are generated and stored for future reference.
@@ -56,30 +56,13 @@ The data is processed through advanced machine learning algorithms to generate a
 
 ---
 
-### **5. Future Enhancements**
+### **Future Enhancements**
 - **Improved AI Model** with real-time data integration.
 - **Expansion to Other Diseases** beyond dengue.
 - **Mobile App Development** for accessibility.
 - **Collaboration with Health Organizations** for real-world deployment.
 
 ---
-
-## **6. Contributors**
-- **Suhani Nimje** - [GitHub](https://github.com/suhaninimje)
-- **Aryan Mehta** - [GitHub](https://github.com/)
-- **Abhimanyu Sareen** - [GitHub](https://github.com/CryptoRhinoGH)
-- **Kanika Gupta** - [GitHub](https://github.com/)
-# Prognosis - Dengue Prediction Platform
-
-## 🌍 Overview
-Prognosis is a predictive analytics platform that forecasts dengue cases in India using 21 parameters of spatial-temporal data and satellite imagery. It helps healthcare providers, researchers, and policymakers make data-driven decisions by generating region-specific reports. The platform features a credit-based system where users can request predictions for their preferred locations.
-
-## 🏗️ Features
-- Predicts dengue cases up to 5 weeks in advance.
-- Uses spatial-temporal data, climate factors, and satellite imagery.
-- Provides region-based reports with an easy-to-use web interface.
-- Targeted for hospitals, researchers, and healthcare organizations.
-- Future plans include expansion to other diseases and regions.
 
 ## 🚀 Getting Started
 
@@ -141,13 +124,6 @@ npm run dev
 
 ![Architecture Diagram](https://example.com/architecture-diagram.png)
 
-## 📜 Contributing
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Make your changes and commit (`git commit -m "Added new feature"`)
-4. Push to your branch (`git push origin feature-branch`)
-5. Submit a pull request
-
 ## 📚 Documentation
 For detailed documentation, visit the **[Prognosis Wiki](https://github.com/yourusername/prognosis/wiki)**.
 
@@ -156,5 +132,13 @@ For detailed documentation, visit the **[Prognosis Wiki](https://github.com/your
 - Integration with government health databases
 - Advanced AI models for better accuracy
 
+---
+
+## **Contributors**
+- **Suhani Nimje** - [GitHub](https://github.com/suhaninimje)
+- **Aryan Mehta** - [GitHub](https://github.com/)
+- **Abhimanyu Sareen** - [GitHub](https://github.com/CryptoRhinoGH)
+- **Kanika Gupta** - [GitHub](https://github.com/)
+
 ## 📬 Contact
-For any questions or collaboration inquiries, email: `contact@prognosis.com`
+For any questions or collaboration inquiries, email: `prognosistoday@gmail.com`
