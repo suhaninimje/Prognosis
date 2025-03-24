@@ -30,15 +30,15 @@ class Navbar extends Component {
     return (
       <nav className={navbarClass}>
         <div className="logo">
-          <Link to="/">
+          <Link to="/Prognosis">
           <img src={logo} alt="Prognosis Logo" className="home-logo" />
           </Link>
         </div>
         <ul className="nav-links">
+          <li><Link to="/tool">Product</Link></li>
           <li><Link to="/solutions">Solutions</Link></li>
           <li><Link to="/casestudies">Case Studies</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/pricing">Pricing</Link></li>
         </ul>
         <ul className="nav-actions">
           <li><Link to="/contact">Contact</Link></li>

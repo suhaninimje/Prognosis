@@ -5,8 +5,9 @@ import os
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required
 from flask_cors import CORS
 
-CORS(app)
 app = Flask(__name__)
+
+CORS(app, origins="http://localhost:3000", methods=["GET", "POST", "OPTIONS"], supports_credentials=True)
 
 # Database setup
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'

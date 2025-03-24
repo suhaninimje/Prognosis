@@ -4,6 +4,7 @@
   "homepage": "https://suhaninimje.github.io/Prognosis",
   "private": true,
   "dependencies": {
+    "axios": "^1.8.4",
     "chart.js": "^4.4.8",
     "cra-template": "1.2.0",
     "leaflet": "^1.9.4",

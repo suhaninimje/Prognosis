@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 80px 20px;
-  background: #faf9f1;
+  width: 80%;
 }
 
 .contact-left, .contact-right {
-  flex: 1; /* Take equal space on both sides */
+  flex: 1; 
   padding: 0 20px;
 }
 
@@ -60,17 +59,19 @@
 .contact-right textarea {
   padding: 12px;
   font-size: 16px;
-  border: 1px solid rgb(128, 0, 0);
+  border: 1px solid #dbdbdb;
   border-radius: 5px;
 }
 
 .contact-right button {
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: px;
   background: rgb(128, 0, 0);
   color: #faf9f1;
   border: none;
   cursor: pointer;
+  width: 400px;
+  border-radius: 20px;
   transition: background 0.3s;
 }
 

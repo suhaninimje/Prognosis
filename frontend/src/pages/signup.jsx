@@ -1,30 +1,55 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Import axios for making HTTP requests
 import logo from "../logo2.png";
 import "./signup.css";
 import { FaEye, FaEyeSlash, FaArrowLeft } from "react-icons/fa";
 
 const Signup = () => {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const [name, setName] = useState("");
-    const [role, setRole] = useState("");
-    const [location, setLocation] = useState("");
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [industry, setIndustry] = useState("");
     const [occupation, setOccupation] = useState("");
+    const [state, setState] = useState("");
+    const [district, setDistrict] = useState("");
+    const [pincode, setPincode] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [agreedToTerms, setAgreedToTerms] = useState(false);
     const navigate = useNavigate();
 
-    const handleSignup = (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault();
+
+        // Check if terms are agreed
         if (!agreedToTerms) {
             alert("You must agree to the Terms and Privacy Policy to continue.");
             return;
         }
-        localStorage.setItem("user", JSON.stringify({ name, email, role, location, occupation }));
-        navigate("/dashboard");
+
+        const signinData = {
+            firstname,
+            lastname,
+            email,
+            password,
+            industry,
+            occupation,
+            state,
+            district,
+            pincode,
+        }
+
+        try {
+            axios.defaults.withCredentials = true;
+            console.log("this is sign in data:", signinData);
+            const response = await axios.post('http://localhost:5000/signup', signinData);
+            console.log(response.data);
+            // Handle success response
+          } catch (error) {
+            console.error('Error:', error.response ? error.response.data : error.message);
+        }
     };
 
     return (
@@ -38,15 +63,15 @@ const Signup = () => {
                             type="text"
                             placeholder="First Name"
                             required
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={firstname}
+                            onChange={(e) => setFirstname(e.target.value)}
                         />
                         <input
                             type="text"
                             placeholder="Last Name"
                             required
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={lastname}
+                            onChange={(e) => setLastname(e.target.value)}
                         />
                     </div>
                     <input
@@ -69,39 +94,41 @@ const Signup = () => {
                                 {showPassword ? <FaEyeSlash /> : <FaEye />}
                             </span>
                         </div>
-                        <div className="password-container">
-                            <input
-                                type={showConfirmPassword ? "text" : "password"}
-                                placeholder="Confirm Password"
-                                required
-                                value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
-                            />
-                            <span onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
-                                {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-                            </span>
-                        </div>
                     </div>
                     <input
                         type="text"
-                        placeholder="Role (e.g., Healthcare Professional)"
+                        placeholder="Industry"
                         required
-                        value={role}
-                        onChange={(e) => setRole(e.target.value)}
+                        value={industry}
+                        onChange={(e) => setIndustry(e.target.value)}
                     />
                     <input
                         type="text"
-                        placeholder="Location (e.g., Region or Country)"
-                        required
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        placeholder="Occupation (e.g., Doctor, Nurse, etc.)"
+                        placeholder="Occupation"
                         required
                         value={occupation}
                         onChange={(e) => setOccupation(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="State"
+                        required
+                        value={state}
+                        onChange={(e) => setState(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="District"
+                        required
+                        value={district}
+                        onChange={(e) => setDistrict(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Pincode"
+                        required
+                        value={pincode}
+                        onChange={(e) => setPincode(e.target.value)}
                     />
                     
                     <div className="terms-container">

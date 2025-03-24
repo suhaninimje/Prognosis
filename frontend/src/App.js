@@ -21,7 +21,7 @@ const AppContent = () => {
     <>
       {!hideNavAndFooter && <Navbar />}
       <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Prognosis" element={<Home />} />
           <Route path="/tool" element={<PredictionTool />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/casestudies" element={<CaseStudies />} />
