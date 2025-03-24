@@ -68,10 +68,10 @@ The data is processed through advanced machine learning algorithms to generate a
 
 ### Prerequisites
 Ensure you have the following installed:
-- Python 3.8+
+- Python 3.10 -- See environment.yml for more details
 - Node.js (for frontend, if applicable)
 - Git
-- Virtual Environment (`venv` or `conda`)
+- Virtual Environment (`conda`)
 
 ### Installation
 
