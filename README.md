@@ -24,7 +24,7 @@ The goal is to help hospitals and health organizations allocate resources effect
 
 ### **Data Sources**
 Prognosis uses the following data sources for analysis:
-- **Satellite Imagery** (NASA, Google Earth Engine)
+- **Satellite Imagery** (Sentinel-Hub)
 - **Weather Data** (Temperature, Humidity, Rainfall)
 - **Geospatial Information** (GIS Mapping)
 - **Historical Dengue Case Reports**
