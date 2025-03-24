@@ -14,7 +14,7 @@ const Hero = () => {
         <h2>Predict. Prevent. Protect.</h2>
           <h2>Empowering Healthcare with Predictive AI</h2>
           <p>Forecast Dengue Outbreaks with Unmatched Precision—Up to 5 Weeks in Advance. Proactive Solutions for a Healthier Future.</p>
-          <button className="tool-button" onClick={() => navigate("/product")}>Try Demo</button>
+          <button className="tool-button" onClick={() => navigate("/tool")}>Try Demo</button>
         </div>
       </div>
     </section>

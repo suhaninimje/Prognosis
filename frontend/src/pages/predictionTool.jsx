@@ -1,19 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import { useInView } from "react-intersection-observer";
+import { Line } from "react-chartjs-2";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 import "leaflet/dist/leaflet.css";
 import "./predictionTool.css";
 
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
 
-const ChangeMapView = ({ lat, lng }) => {
-    const map = useMap();
-
-    useEffect(() => {
-      map.setView([lat, lng], 10); 
-    }, [lat, lng, map]);
-
-    return null;
-};
+  const PredictionChart = ({ data }) => {
+    const chartData = {
+      labels: data.map(item => `Epiweek ${item.epiweek}`), 
+      datasets: [
+        {
+          label: "Prediction",
+          data: data.map(item => item.prediction), 
+          fill: false,
+          borderColor: "rgba(75,192,192,1)",
+          tension: 0.1
+        }
+      ]
+    };
+  
+    return (
+      <div>
+        <h3>Prediction for Dengue Cases</h3>
+        <Line data={chartData} />
+      </div>
+    );
+  };
+  
 
 const PredictionTool = () => {
     
@@ -105,7 +129,22 @@ const PredictionTool = () => {
     const [activeTab, setActiveTab] = useState("district");
     const [selectedState, setSelectedState] = useState("");
     const [selectedDistrict, setSelectedDistrict] = useState("");
+    const [predictions, setPredictions] = useState([]);
+    const [chartData, setChartData] = useState({});
 
+
+    const fetchPredictions = async () => {
+        try {
+            const response = await fetch("http://127.0.0.1:5000");
+            const data = await response.json();
+            setPredictions(data);
+
+        } catch (error) {
+            console.error("Error fetching predictions:", error);
+        }
+    };
+
+    
     const handleStateChange = (event) => {
         const stateId = event.target.value;
         setSelectedState(stateId);
@@ -147,14 +186,30 @@ const PredictionTool = () => {
         return location.lat && location.lng ? <Marker position={[location.lat, location.lng]} /> : null;
     }
 
-    const handleGenerateReport = () => {
-        console.log("Generating report for:", location);
-        // Send location data to the backend
-    };
-
     const { ref: headerRef, inView: inViewHeader } = useInView({
         threshold: 0.3,
     });
+
+    useEffect(() => {
+
+        // Process the data into chart format
+        const labels = predictions.map(item => `Epiweek ${item.epiweek}`);
+        const data = predictions.map(item => item.prediction);
+
+        setChartData({
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Predictions',
+                    data: data,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    tension: 0.1, 
+                    fill: true,
+                },
+            ],
+        });
+    }, []);
 
     return (
         <div className="prediction-container">
@@ -231,7 +286,16 @@ const PredictionTool = () => {
                 </MapContainer>
             </div>
 
-            <button onClick={handleGenerateReport}>Generate Report</button>
+            <button onClick={fetchPredictions}>Generate Report</button>
+
+            <div>
+            <div className="prediction-tool">
+      <h2>Dengue Prediction Tool</h2>
+      <PredictionChart data={predictions} />
+    </div>
+            
+        </div>
+
         </div>
     );
 };

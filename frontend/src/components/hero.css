@@ -47,8 +47,13 @@
 .hero-content h1 {
     font-size: 8em;
     margin-bottom: 0px;
+    color: #faf9f1;
 }
-
+.hero-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    color: #faf9f1;
+}
 .hero-content p {
     font-size: 1.1em;
     margin-bottom: 20px;

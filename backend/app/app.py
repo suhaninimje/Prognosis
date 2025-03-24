@@ -101,7 +101,6 @@ def login():
     else:
         return jsonify({'message': 'Invalid email or password'}), 401
 
-# Example protected endpoint that requires JWT token
 @app.route('/protected', methods=['GET'])
 @jwt_required()
 def protected():
@@ -119,6 +118,7 @@ def predict():
         weeks_ahead = request.json.get("weeks_ahead", 5)
         location = request.json.get("district_code", 530)
 
+        # Running the model locally due to space constraints
         project_folder = "/home/asareen/shared/Prognosis/results/"
         model_path = "/home/asareen/shared/Prognosis/saved_models/lstm_model.pth"
 
