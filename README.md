@@ -146,9 +146,13 @@ The script generates a JSON file in the specified `project_folder` with dengue c
 
 ## 🏗️ Project Architecture
 
+-**Pictographic Representation of the Model:** 
+
+![WhatsApp Image 2025-03-23 at 00 32 28_f851da4d](https://github.com/user-attachments/assets/f38af5c4-7f17-432a-a553-cfe9ca02338a)
 - **Backend:** Python (Flask)
 - **Machine Learning Model:** Uses spatial-temporal data & satellite imagery
-- **Frontend:** React.js (optional)
+- **Frontend:** React.js (optional)![WhatsApp Image 2025-03-23 at 00 32 28_37afcbd4]
+
 - **Database:** PostgreSQL (or preferred DB)
 
 ---
