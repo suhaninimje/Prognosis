@@ -112,47 +112,39 @@ def ping():
     return jsonify({"message": "pong"})
 
 # Prediction endpoint
-@app.route('/predict', methods=['POST','GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
-        project_folder = request.json.get("project_folder", "/home/asareen/shared/Prognosis/results")
-        model_path = request.json.get("model_path", "/home/asareen/shared/Prognosis/saved_models/lstm_model.pth")
-        start_epiweek = request.json.get("start_epiweek", None)
+        start_epiweek = request.json.get("start_epiweek")
         weeks_ahead = request.json.get("weeks_ahead", 5)
-        location = request.json.get("district_code", 530)
 
-        # Define the script path
+        project_folder = "/home/asareen/shared/Prognosis/results/"
+        model_path = "/home/asareen/shared/Prognosis/saved_models/lstm_model.pth"
+
         script_path = Path(__file__).resolve().parent.parent.parent / "code" / "predict_next_weeks.py"
-        cmd = [sys.executable, str(script_path), "--project_folder", project_folder]
+        cmd = [
+            sys.executable, str(script_path),
+            "--project_folder", project_folder,
+            "--load_model_path", model_path,
+            "--weeks_ahead", str(weeks_ahead)
+        ]
 
-        # Add optional arguments if provided
-        if model_path:
-            cmd += ["--load_model_path", model_path]
         if start_epiweek:
             cmd += ["--start_epiweek", str(start_epiweek)]
-        if weeks_ahead:
-            cmd += ["--weeks_ahead", str(weeks_ahead)]
-        if location:
-            cmd += ["--district_code", str(location)]
 
-        # Execute the script
         result = subprocess.run(cmd, capture_output=True, text=True)
 
-        # Check for execution errors
         if result.returncode != 0:
-            return jsonify({"error": "Prediction script failed", "details": result.stderr}), 500
+            return jsonify({"error": "Prediction script failed", "stderr": result.stderr}), 500
 
-        # Read and return the JSON output
-        output_lines = result.stdout.splitlines()
-        for line in output_lines:
-            if line.strip().startswith("{") or line.strip().startswith("["):
-                try:
-                    parsed_output = json.loads(line.strip())
-                    return jsonify(parsed_output), 200
-                except json.JSONDecodeError:
-                    continue
+        output_file = Path(project_folder) / "next_week_preds.json"
+        if not output_file.exists():
+            return jsonify({"error": "Prediction output file not found."}), 500
 
-        return jsonify({"error": f"Failed to parse prediction output: {output_lines}"}), 500
+        with open(output_file, 'r') as f:
+            data = json.load(f)
+
+        return jsonify(data), 200
 
     except Exception as ex:
         return jsonify({"error": str(ex)}), 500
