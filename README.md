@@ -136,7 +136,7 @@ For detailed documentation, visit the **[Prognosis Wiki](https://github.com/your
 
 ## **Contributors**
 - **Suhani Nimje** - [GitHub](https://github.com/suhaninimje)
-- **Aryan Mehta** - [GitHub](https://github.com/)
+- **Aryan Mehta** - [GitHub](https://github.com/abm6761)
 - **Abhimanyu Sareen** - [GitHub](https://github.com/CryptoRhinoGH)
 - **Kanika Gupta** - [GitHub](https://github.com/)
 
