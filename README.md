@@ -125,7 +125,7 @@ npm run dev
 ![Architecture Diagram](https://example.com/architecture-diagram.png)
 
 ## 📚 Documentation
-For detailed documentation, visit the **[Prognosis Wiki](https://github.com/yourusername/prognosis/wiki)**.
+For detailed documentation, visit the **[Prognosis Wiki](https://github.com/suhaninimje/prognosis/wiki)**.
 
 ## ⚡ Future Enhancements
 - Expansion to other diseases like Malaria and Chikungunya
