@@ -135,7 +135,7 @@ const PredictionTool = () => {
 
     const fetchPredictions = async () => {
         try {
-            const response = await fetch("http://127.0.0.1:5000");
+            const response = await fetch("http://127.0.0.1:5000/predict");
             const data = await response.json();
             setPredictions(data);
 
@@ -192,7 +192,7 @@ const PredictionTool = () => {
 
     useEffect(() => {
 
-        // Process the data into chart format
+        // Processing the data into chart format
         const labels = predictions.map(item => `Epiweek ${item.epiweek}`);
         const data = predictions.map(item => item.prediction);
 
@@ -218,16 +218,12 @@ const PredictionTool = () => {
                 <p>Explore how our tailored strategies have transformed businesses and driven measurable success for our clients.</p>
             </div>
 
-            <h2>Dengue Prediction Tool</h2>
-
-            {/* Toggle Buttons */}
             <div className="toggle-buttons">
                 <button className={activeTab === "district" ? "active" : ""} onClick={() => setActiveTab("district")}>District</button>
                 <button className={activeTab === "coordinate" ? "active" : ""} onClick={() => setActiveTab("coordinate")}>Coordinate</button>
                 <button className={activeTab === "pincode" ? "active" : ""} onClick={() => setActiveTab("pincode")}>Pincode</button>
             </div>
 
-            {/* Input Fields */}
             <div className="input-section">
                 {activeTab === "district" && (
                     <div>

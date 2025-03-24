@@ -22,17 +22,17 @@ const ClientReviews = () => {
 const reviews = [
   {
     text: "Prognosis has been indispensable in preventing dengue outbreaks. Their accurate predictions and timely warnings have improved disease control strategies.",
-    author: "Michael Smith",
+    author: "Ravi Kumar",
     position: "Health Officer",
   },
   {
     text: "Prognosis has transformed our approach to dengue prevention. Their localized data reports empower us to implement targeted interventions.",
-    author: "Laura Johnson",
+    author: "Priya Sharma",
     position: "NGO Director",
   },
   {
     text: "Prognosis plays a vital role in our fight against dengue. Their early warning system enables proactive planning and response, saving lives.",
-    author: "David Brown",
+    author: "Anil Desai",
     position: "Government Official",
   },
 ];
