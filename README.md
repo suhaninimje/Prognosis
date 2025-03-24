@@ -98,3 +98,69 @@ python app.py
 cd frontend
 npm install
 npm run dev
+```
+
+---
+
+## 🔧 API Endpoints
+
+### 📨 POST /predict
+
+- **Description:** Predicts dengue cases for a given region.
+- **Request:**
+```json
+{
+  "start_epiweek": 202401,
+  "weeks_ahead": 5,
+  "district_code": 530
+}
+```
+
+- **Response:**
+```json
+[
+  { "epiweek": 202401, "prediction": 8.38 },
+  { "epiweek": 202402, "prediction": 4.92 },
+  { "epiweek": 202403, "prediction": 3.32 },
+  { "epiweek": 202404, "prediction": 2.35 },
+  { "epiweek": 202405, "prediction": 1.77 }
+]
+```
+
+---
+
+### 📜 Predict Script (`predict_next_weeks.py`)
+
+The `predict_next_weeks.py` script allows batch predictions from the trained LSTM model.
+
+#### 🔑 Arguments:
+- `--project_folder` : Where results (predictions) will be stored
+- `--start_epiweek` : Epiweek to start predictions from
+- `--weeks_ahead` : Number of weeks ahead to predict (default: 5)
+- `--load_model_path` : Path to the saved LSTM model `.pth` file
+- `--district_code` : District code for which prediction is needed
+
+The script generates a JSON file in the specified `project_folder` with dengue case forecasts.
+
+---
+
+## 🏗️ Project Architecture
+
+- **Backend:** Python (Flask)
+- **Machine Learning Model:** Uses spatial-temporal data & satellite imagery
+- **Frontend:** React.js (optional)
+- **Database:** PostgreSQL (or preferred DB)
+
+---
+
+## 👩‍💻 Contributors
+
+- **Suhani Nimje** - [GitHub](https://github.com/suhaninimje)
+- **Aryan Mehta** - [GitHub](https://github.com/abm6761)
+- **Abhimanyu Sareen** - [GitHub](https://github.com/CryptoRhinoGH)
+
+---
+
+## 📬 Contact
+
+For any questions or collaboration inquiries, email: `prognosistoday@gmail.com`
