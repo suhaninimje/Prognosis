@@ -70,7 +70,7 @@ def main():
     parser.add_argument("--load_model_path", type=str, default="")
     args = parser.parse_args()
 
-    print("Loading model...")
+    #print("Loading model...")
     input_size = 13
     model = flightLSTM(input_size=input_size, hidden_size=230, num_layers=2, output_size=1)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -78,11 +78,12 @@ def main():
 
     if args.load_model_path and os.path.exists(args.load_model_path):
         model.load_state_dict(torch.load(args.load_model_path, map_location=device))
-        print("Loaded weights from:", args.load_model_path)
+        #print("Loaded weights from:", args.load_model_path)
     else:
-        print("WARNING: No weights loaded. You must train and save weights using the training script.")
+        pass
+        #print("WARNING: No weights loaded. You must train and save weights using the training script.")
 
-    print("Generating predictions...")
+    #print("Generating predictions...")
     # Dummy initial sequence — Replace with real data loading
     np.random.seed(42)
     initial_seq = np.random.rand(1, args.lstm_weeks, input_size)
@@ -101,8 +102,9 @@ def main():
     with open(out_path, "w") as f:
         json.dump(result, f, indent=2)
 
-    print("Saved predictions to", out_path)
+    #print("Saved predictions to", out_path)
     print(json.dumps(result, indent=2))
+    return json.dumps(result, indent=2)
 
 
 if __name__ == "__main__":
