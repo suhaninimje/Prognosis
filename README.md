@@ -37,6 +37,8 @@ Prognosis uses the following data sources for analysis:
 
 The data is processed through advanced machine learning algorithms to generate accurate predictions.
 
+**Dataset created and used by us:** ![Kaggle Dataset](https://kaggle.com/datasets/3cc33fe159b596b8457993ca6faf645677100d09466fdba24d93daac817ba19b)
+
 ---
 
 ### 🤖 Model and Prediction Process
