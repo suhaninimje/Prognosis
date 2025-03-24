@@ -68,6 +68,7 @@ def main():
     parser.add_argument("--weeks_ahead", type=int, default=5)
     parser.add_argument("--lstm_weeks", type=int, default=10)
     parser.add_argument("--load_model_path", type=str, default="")
+    parser.add_argument("--district_code", type=int, default="")
     args = parser.parse_args()
 
     #print("Loading model...")

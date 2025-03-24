@@ -4,10 +4,14 @@ from flask_bcrypt import Bcrypt
 import os
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required
 from flask_cors import CORS
+from pathlib import Path
+import sys
+import subprocess
+import json
 
 app = Flask(__name__)
 
-CORS(app, origins="http://localhost:5000", methods=["GET", "POST", "OPTIONS"], supports_credentials=True)
+#CORS(app, origins="http://localhost:5000", methods=["GET", "POST", "OPTIONS"], supports_credentials=True)
 
 # Database setup
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -103,19 +107,22 @@ def login():
 def protected():
     return jsonify({'message': 'This is a protected route accessible only with a valid token'}), 200
 
+@app.route("/ping", methods=["GET", "OPTIONS"])
+def ping():
+    return jsonify({"message": "pong"})
+
 # Prediction endpoint
 @app.route('/predict', methods=['POST','GET'])
 def predict():
-    return jsonify({"error": "Prediction script failed", "details": "testing"}), 200
     try:
-        project_folder = request.json.get("project_folder", "../results")
+        project_folder = request.json.get("project_folder", "/home/asareen/shared/Prognosis/results")
         model_path = request.json.get("model_path", "/home/asareen/shared/Prognosis/saved_models/lstm_model.pth")
         start_epiweek = request.json.get("start_epiweek", None)
         weeks_ahead = request.json.get("weeks_ahead", 5)
         location = request.json.get("district_code", 530)
 
         # Define the script path
-        script_path = Path(__file__).resolve().parent.parent / "code" / "predict_next_weeks.py"
+        script_path = Path(__file__).resolve().parent.parent.parent / "code" / "predict_next_weeks.py"
         cmd = [sys.executable, str(script_path), "--project_folder", project_folder]
 
         # Add optional arguments if provided
@@ -145,7 +152,7 @@ def predict():
                 except json.JSONDecodeError:
                     continue
 
-        return jsonify({"error": "Failed to parse prediction output"}), 500
+        return jsonify({"error": f"Failed to parse prediction output: {output_lines}"}), 500
 
     except Exception as ex:
         return jsonify({"error": str(ex)}), 500
@@ -155,4 +162,4 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
